@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100dvh;
+  background-color: rgb(28, 28, 28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 3rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h1,
+h2 {
+  font-family: "DynaPuff", system-ui;
+  color: #ff4500;
+}
+.erro {
+  color: red;
+}
+
+form p {
+  margin-top: 0.5rem;
+}
+input {
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 300px;
+  border: none;
+  background-color: rgba(255, 68, 0, 0.488);
+  font-weight: bold;
+  color: #fff;
+  margin-top: 2rem;
+}
+input::placeholder {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.645);
+}
+button {
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: #ff4500;
+  font-weight: bold;
+  color: white;
+  transition: 300ms;
+  margin-top: 1rem;
+}
+button:hover {
+  background-color: rgb(214, 57, 0);
+}
+.busca-filme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  transition: all 5000ms;
+}
+.wave {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Movie */
+
+.movie {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  width: 0;
+  border-left: #ff4500 solid 3px;
+  transition: all 500ms;
+  padding: 0 2rem;
+}
+.poster {
+  width: 175px;
+  border: #ff4500 solid 2px;
+}
+.title {
+  margin-top: 0.5rem;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+span {
+  font-weight: bold;
+  color: #ff4500;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* GPT RESPONSIVE */
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    padding: 1rem;
+    overflow-y: auto;
+    gap: 2rem;
+  }
+
+  .busca-filme {
+    width: 100%;
+  }
+
+  input {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 50%;
+    font-size: 1rem;
+  }
+
+  .movie {
+    width: 100%;
+    border-left: none;
+    border-top: #ff4500 solid 3px;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .poster {
+    max-width: 250px;
+  }
+
+  .info {
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  h2.title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+  }
+}
